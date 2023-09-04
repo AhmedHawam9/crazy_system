@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل الموظف</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="main-scss/main.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.css"
+      integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="img/main-project.png" type="image" />
+    <!-- ? Favicon -->
+  </head>
+
+  <body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+      <!---------------------- start sidebar -------------------------------------------->
+
+      <section class="sidebar open">
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- <div class="image_logo">
+            <img src="image/logo.png" alt="logo_sidebar" class="logo" />
+          </div> -->
+
+          <!-- <h5>محتوي النظام</h5> -->
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link align-middle">
+              <img src="img/home.png" alt="icon" />
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="details-project.html" class="nav-link align-middle">
+              <img src="img/project.png" alt="icon" />
+              <span>المشاريع</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tasks.html" class="nav-link align-middle">
+              <img src="img/task.png" alt="icon" />
+              <span> المهام</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="table.html" class="nav-link align-middle">
+              <img src="img/Frame.png" alt="icon" />
+              <span> سجل الحضور والانصراف</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="teams.html" class="nav-link align-middle">
+              <img src="img/group.png" alt="icon" />
+              <span> الفرق</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="all-employee.html" class="nav-link align-middle">
+              <img src="img/staf.png" alt="icon" />
+              <span> الموظفين</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="seting.html" class="nav-link align-middle">
+              <img src="img/seting.png" alt="icon" />
+              <span> الاعدادات</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!---------------------- end sidebar -------------------------------------------->
+      <!---------------------- start main content -------------------------------------------->
+
+      <section class="index_cards">
+        <!---------------------- start nav -------------------------------------------->
+        <nav class="nav_top navbar">
+          <div class="container">
+            <div class="menu">
+              <i class="bi bi-list"></i>
+              <!-- <h4>المشاريع</h4> -->
+            </div>
+
+            <div class="info">
+              <div class="notfication">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="notfication" onclick="showNotification()">
+                <i class="fa-regular fa-bell"></i>
+                <!-- <i class="bi bi-bell"></i> -->
+                <!-- <span class="alerts"> 1 </span> -->
+              </div>
+              <span>12 مايو 2023 مـ </span>
+              <div class="img">
+                <img src="img/Avatar.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!---------------------- finish nav -------------------------------------------->
+
+        <!---------------------- start content -------------------------------------------->
+        <div class="content_page">
+          <div class="container">
+            <div class="back">
+              <div class="row">
+                <div class="head-details">
+                  <h5>
+                    جميع الموظفين
+                    <h5 style="color: rgba(87, 107, 116, 1)">
+                      / تفاصيل الموظف
+                    </h5>
+                  </h5>
+                </div>
+                <div class="details">
+                  <div class="img">
+                    <img src="img/details.png" alt="" />
+                    <h5>مدير مشروعات</h5>
+                    <p>flutter</p>
+                  </div>
+                  <div class="add">
+                    <h5>احمد فتحي</h5>
+                    <p>
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                      توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+                      هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
+                      الحروف التى يولدها التطبيق.
+                    </p>
+                    <div class="botton">
+                      <a href="amendment-employe.html"
+                        ><button type="button" class="btn btn-info">
+                          تعديل
+                        </button></a
+                      >
+
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="confirm-color"
+                      >
+                        حذف
+                      </button>
+                    </div>
+                  </div>
+                  <div class="code">
+                    <h6>
+                      الكود التسلسلي :
+                      <p>#116584</p>
+                    </h6>
+                    <h6>
+                      البريد الالكتروني :
+                      <p>username22@gmail.com</p>
+                    </h6>
+                    <h6>
+                      تاريخ الانضمام :
+                      <p>4 يناير 2018</p>
+                    </h6>
+                    <h6>
+                      تاريخ الميلاد :
+                      <p>4 اغسطس 1990</p>
+                    </h6>
+                    <h6>
+                      الراتب :
+                      <p>10,000 جنيه مصري</p>
+                    </h6>
+                  </div>
+                  <!-- <div class="sttar">
+                    <i class="fa-regular fa-star"></i>
+                  </div> -->
+                </div>
+
+                <div class="list-employe">
+                  <h4>المهام</h4>
+                  <div class="two-task">
+                    <div class="col-lg-2 col-md-3 col-10">
+                      <select id="disabledSelect" class="form-select">
+                        <option>كل المهام</option>
+                        <option>كل المهام</option>
+                        <option>كل المهام</option>
+                      </select>
+                    </div>
+                    <button type="button" class="btn btn-success">
+                      +مهمة جديدة
+                    </button>
+                  </div>
+
+                  <div class="task-employe">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="pare-task">
+                          <div class="task">
+                            <h5>
+                              عمل الوايرفريم الخاص بصفحات التسجيل فى تطبيق شغيعا
+                            </h5>
+                            <h6>
+                              <i class="fa-solid fa-shield"></i> المشروع :
+                              <p>منصة شفيعا</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-user"></i> وقت التسليم
+                              <p>: 22 مارس, 2023</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-calendar-days"></i> التيم
+                              ليدر :
+                              <p>أحمد فتحي</p>
+                            </h6>
+                          </div>
+                          <div class="left">
+                            <p>مهمة جديدة</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="pare-task">
+                          <div class="task">
+                            <h5>
+                              عمل الوايرفريم الخاص بصفحات التسجيل فى تطبيق شغيعا
+                            </h5>
+                            <h6>
+                              <i class="fa-solid fa-shield"></i> المشروع :
+                              <p>منصة شفيعا</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-user"></i> وقت التسليم
+                              <p>: 22 مارس, 2023</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-calendar-days"></i> التيم
+                              ليدر :
+                              <p>أحمد فتحي</p>
+                            </h6>
+                          </div>
+                          <div class="left left-2">
+                            <p>جاري العمل عليها</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="pare-task">
+                          <div class="task">
+                            <h5>
+                              عمل الوايرفريم الخاص بصفحات التسجيل فى تطبيق شغيعا
+                            </h5>
+                            <h6>
+                              <i class="fa-solid fa-shield"></i> المشروع :
+                              <p>منصة شفيعا</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-user"></i> وقت التسليم
+                              <p>: 22 مارس, 2023</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-calendar-days"></i> التيم
+                              ليدر :
+                              <p>أحمد فتحي</p>
+                            </h6>
+                          </div>
+                          <div class="left left-3">
+                            <p>مهمة منتهية</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="pare-task">
+                          <div class="task">
+                            <h5>
+                              عمل الوايرفريم الخاص بصفحات التسجيل فى تطبيق شغيعا
+                            </h5>
+                            <h6>
+                              <i class="fa-solid fa-shield"></i> المشروع :
+                              <p>منصة شفيعا</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-user"></i> وقت التسليم
+                              <p>: 22 مارس, 2023</p>
+                            </h6>
+                            <h6>
+                              <i class="fa-regular fa-calendar-days"></i> التيم
+                              ليدر :
+                              <p>أحمد فتحي</p>
+                            </h6>
+                          </div>
+                          <div class="left left-2">
+                            <p>جاري العمل عليها</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- end table -->
+
+    <script>
+      function blockAlert() {
+        Swal.fire({
+          html:
+            '<img src="image/block.png" alt="add">' +
+            '<h5 class="swal2-title"> هل أنت متأكد من حظر  الامتحان ؟</h5>' +
+            '<p class="swal2-html-container"> فى حالة الضغط على تأكيد الحظر سيتم حظر الامتحان من المنصة نهائيا وحذ جميع الأسألة التى يحتويها الامتحان </p>',
+
+          showCancelButton: true,
+
+          confirmButtonText: "تأكيد الحظر",
+          confirmButtonAriaLabel: "Thumbs up, great!",
+          cancelButtonText: "الغاء",
+          cancelButtonAriaLabel: "Thumbs down",
+        });
+      }
+    </script>
+    <!-- sweet alert -->
+
+    <script>
+      confirmColor = document.querySelector("#confirm-color");
+      // ALERT WITH FUNCTIONAL CONFIRM & CANCEL BUTTON
+      confirmColor.onclick = function () {
+        Swal.fire({
+          title: "هل انت متأكد من حذف الموظف ؟",
+          text: "يمكنك الاطلاع علي تفاصيل الموظف و معرفة سجل المشاريع و المهمات و الحضور و الانصراف الخاص به ",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "نعم, متأكد",
+          cancelButtonText: "لا",
+          customClass: {
+            confirmButton: "btn btn-success me-1",
+            cancelButton: "btn btn-label-secondary",
+          },
+          buttonsStyling: false,
+        }).then(function (result) {
+          if (result.value) {
+            Swal.fire({
+              icon: "success",
+              title: "Deleted!",
+              text: "تم الحذف بنجاح",
+              customClass: {
+                confirmButton: "btn btn-success",
+              },
+            });
+          } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire({
+              title: "Cancelled",
+              text: "لم يتم الحذف ",
+              icon: "error",
+              customClass: {
+                confirmButton: "btn btn-success",
+              },
+            });
+          }
+        });
+      };
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.js"
+      integrity="sha512-pQdCIGAWAwzEHgw7boqX3wRNUqyaj7ta8qHsZ2yZtJofKqwSsh98Q+NJn96MAYCMcMnoZhdUo771JzaJCbrJMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- sweet alert -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+
+    <script>
+      $(document).ready(function () {
+        // Handle click event for the radio button
+        $(".radio-button").on("click", function () {
+          // Remove "active" class from all radio buttons
+          $(".radio-button").removeClass("active");
+          // Add "active" class to the clicked radio button
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

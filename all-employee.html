@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>جميع الموظفين</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="main-scss/main.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.css"
+      integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="img/main-project.png" type="image" />
+    <!-- ? Favicon -->
+  </head>
+
+  <body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+      <!---------------------- start sidebar -------------------------------------------->
+
+      <section class="sidebar open">
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- <div class="image_logo">
+            <img src="image/logo.png" alt="logo_sidebar" class="logo" />
+          </div> -->
+
+          <!-- <h5>محتوي النظام</h5> -->
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link align-middle">
+              <img src="img/home.png" alt="icon" />
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="details-project.html" class="nav-link align-middle">
+              <img src="img/project.png" alt="icon" />
+              <span>المشاريع</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tasks.html" class="nav-link align-middle">
+              <img src="img/task.png" alt="icon" />
+              <span> المهام</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="table.html" class="nav-link align-middle">
+              <img src="img/Frame.png" alt="icon" />
+              <span> سجل الحضور والانصراف</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="teams.html" class="nav-link align-middle">
+              <img src="img/group.png" alt="icon" />
+              <span> الفرق</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="all-employee.html" class="nav-link align-middle">
+              <img src="img/staf.png" alt="icon" />
+              <span> الموظفين</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="seting.html" class="nav-link align-middle">
+              <img src="img/seting.png" alt="icon" />
+              <span> الاعدادات</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!---------------------- end sidebar -------------------------------------------->
+      <!---------------------- start main content -------------------------------------------->
+
+      <section class="index_cards">
+        <!---------------------- start nav -------------------------------------------->
+        <nav class="nav_top navbar">
+          <div class="container">
+            <div class="menu">
+              <i class="bi bi-list"></i>
+              <!-- <h4>المشاريع</h4> -->
+            </div>
+
+            <div class="info">
+              <div class="notfication">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="notfication" onclick="showNotification()">
+                <i class="fa-regular fa-bell"></i>
+                <!-- <i class="bi bi-bell"></i> -->
+                <!-- <span class="alerts"> 1 </span> -->
+              </div>
+              <span>12 مايو 2023 مـ </span>
+              <div class="img">
+                <img src="img/Avatar.png" alt="" />
+              </div>
+
+              <!-- <div class="btn-group">
+                <button
+                  class="btn btn-sm dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                <img src="img/Avatar.png" alt="">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="settings.html">اعدادات الحساب</a></li>
+                  <li onclick="acceptAlert()">تسجيل الخروج</li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </nav>
+        <!---------------------- finish nav -------------------------------------------->
+
+        <!---------------------- start content -------------------------------------------->
+        <div class="content_page">
+          <div class="container">
+            <div class="back">
+            <div class="row">
+           
+                <div class="head-employee">
+                  <h4>جميع الموظفين</h4>
+                  <a href="add-newemployee.html">
+                    <button type="button" class="btn btn-success">
+                      +موظف جديد
+                    </button>
+
+                  </a>
+               
+                </div>
+                <div class="search">
+                  <form>
+                    <div class="row">
+                      <div class="col-lg-5 col-md-5 col-12">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=" بحث عن طريق الاسم او الكود التسلسلي... "
+                        />
+                      </div>
+                      <div class="col-lg-5 col-md-5 col-12">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="بحث عن طريق الفرقة... "
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-6">
+                        <button type="button" class="btn btn-info">بحث</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="icon-list">
+                  <i class="fa-solid fa-grip"></i>
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="box1">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe1.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe2.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe3.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe4.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe1.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe2.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe3.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe4.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe1.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe2.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe3.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6">
+                      <div class="card-employee">
+                        <div class="card" style="width: 18rem">
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="star">
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+
+                          <img
+                            src="img/employe4.png"
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">احمد فتحي</h5>
+                            <p>project manager</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item"></li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- table employe -->
+                <div class="row">
+                  <div class="table-responsive table-employe">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col" style="text-align: center">الاسم</th>
+                          <th scope="col">رقم الهاتف</th>
+                          <th scope="col">الكود التسلسلي</th>
+                          <th scope="col">الفرقة</th>
+                          <th scope="col">المنصب</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <img src="img/table1.png" alt="" />
+                            <p>
+                              ابراهيم الرفاعي
+                              <br />
+                              username22@gmail.com
+                            </p>
+                          </th>
+
+                          <td>0123654887</td>
+                          <td>#20255</td>
+                          <td>ceo</td>
+                          <td>مدير</td>
+                          <td>
+                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">
+                            <img src="img/table1.png" alt="" />
+                            <p>
+                              ابراهيم الرفاعي
+                              <br />
+                              username22@gmail.com
+                            </p>
+                          </th>
+                          <td>0123654887</td>
+                          <td>#20255</td>
+                          <td>ceo</td>
+                          <td>مدير</td>
+                          <td>
+                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <img src="img/table1.png" alt="" />
+                            <p>
+                              ابراهيم الرفاعي
+                              <br />
+                              username22@gmail.com
+                            </p>
+                          </th>
+                          <td>0123654887</td>
+                          <td>#20255</td>
+                          <td>ceo</td>
+                          <td>مدير</td>
+                          <td>
+                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <img src="img/table1.png" alt="" />
+                            <p>
+                              ابراهيم الرفاعي
+                              <br />
+                              username22@gmail.com
+                            </p>
+                          </th>
+                          <td>0123654887</td>
+                          <td>#20255</td>
+                          <td>ceo</td>
+                          <td>مدير</td>
+                          <td>
+                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <img src="img/table1.png" alt="" />
+                            <p>
+                              ابراهيم الرفاعي
+                              <br />
+                              username22@gmail.com
+                            </p>
+                          </th>
+                          <td>0123654887</td>
+                          <td>#20255</td>
+                          <td>ceo</td>
+                          <td>مدير</td>
+                          <td>
+                            <i class="fa-solid fa-pen"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item"></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- end table -->
+
+    <script>
+      function blockAlert() {
+        Swal.fire({
+          html:
+            '<img src="image/block.png" alt="add">' +
+            '<h5 class="swal2-title"> هل أنت متأكد من حظر  الامتحان ؟</h5>' +
+            '<p class="swal2-html-container"> فى حالة الضغط على تأكيد الحظر سيتم حظر الامتحان من المنصة نهائيا وحذ جميع الأسألة التى يحتويها الامتحان </p>',
+
+          showCancelButton: true,
+
+          confirmButtonText: "تأكيد الحظر",
+          confirmButtonAriaLabel: "Thumbs up, great!",
+          cancelButtonText: "الغاء",
+          cancelButtonAriaLabel: "Thumbs down",
+        });
+      }
+    </script>
+    <!-- sweet alert -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.js"
+      integrity="sha512-pQdCIGAWAwzEHgw7boqX3wRNUqyaj7ta8qHsZ2yZtJofKqwSsh98Q+NJn96MAYCMcMnoZhdUo771JzaJCbrJMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- sweet alert -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweet alert -->
+    <!-- show / hide edit menu in card -->
+    <script>
+      function toggleMenu(menuId) {
+        var menu = document.getElementById(menuId);
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("drop-menu-info");
+        var target = event.target;
+
+        if (!target.matches(".bi-three-dots-vertical")) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    <!-- show / hide edit menu in card -->
+
+    <script>
+      $(document).ready(function () {
+        // Handle click event for the radio button
+        $(".radio-button").on("click", function () {
+          // Remove "active" class from all radio buttons
+          $(".radio-button").removeClass("active");
+          // Add "active" class to the clicked radio button
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

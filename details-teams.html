@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الفرق / تفاصيل الفريق</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="main-scss/main.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.css"
+      integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="img/main-project.png" type="image" />
+    <!-- ? Favicon -->
+  </head>
+
+  <body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+      <!---------------------- start sidebar -------------------------------------------->
+
+      <section class="sidebar open">
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- <div class="image_logo">
+            <img src="image/logo.png" alt="logo_sidebar" class="logo" />
+          </div> -->
+
+          <!-- <h5>محتوي النظام</h5> -->
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link align-middle">
+              <img src="img/home.png" alt="icon" />
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="details-project.html" class="nav-link align-middle">
+              <img src="img/project.png" alt="icon" />
+              <span>المشاريع</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tasks.html" class="nav-link align-middle">
+              <img src="img/task.png" alt="icon" />
+              <span> المهام</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="table.html" class="nav-link align-middle">
+              <img src="img/Frame.png" alt="icon" />
+              <span> سجل الحضور والانصراف</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="teams.html" class="nav-link align-middle">
+              <img src="img/group.png" alt="icon" />
+              <span> الفرق</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="all-employee.html" class="nav-link align-middle">
+              <img src="img/staf.png" alt="icon" />
+              <span> الموظفين</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="seting.html" class="nav-link align-middle">
+              <img src="img/seting.png" alt="icon" />
+              <span> الاعدادات</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!---------------------- end sidebar -------------------------------------------->
+      <!---------------------- start main content -------------------------------------------->
+
+      <section class="index_cards">
+        <!---------------------- start nav -------------------------------------------->
+        <nav class="nav_top navbar">
+          <div class="container">
+            <div class="menu">
+              <i class="bi bi-list"></i>
+              <!-- <h4>المشاريع</h4> -->
+            </div>
+
+            <div class="info">
+              <div class="notfication">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="notfication" onclick="showNotification()">
+                <i class="fa-regular fa-bell"></i>
+                <!-- <i class="bi bi-bell"></i> -->
+                <!-- <span class="alerts"> 1 </span> -->
+              </div>
+              <span>12 مايو 2023 مـ </span>
+              <div class="img">
+                <img src="img/Avatar.png" alt="" />
+              </div>
+
+              <!-- <div class="btn-group">
+                <button
+                  class="btn btn-sm dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                <img src="img/Avatar.png" alt="">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="settings.html">اعدادات الحساب</a></li>
+                  <li onclick="acceptAlert()">تسجيل الخروج</li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </nav>
+        <!---------------------- finish nav -------------------------------------------->
+
+        <!---------------------- start content -------------------------------------------->
+        <div class="content_page">
+          <div class="container">
+            <div class="content">
+              <div class="row">
+                <div class="col-12">
+                  <div class="team-Flutter">
+                    <div class="img">
+                      <img src="img/people.png" alt="" />
+                      <div class="details-Flutter">
+                        <h4>Flutter Developer Team</h4>
+                        <div class="center">
+                          <div class="num-team">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>عدد الفريق :<span>4</span></p>
+                          </div>
+                          <div class="num-team">
+                            <i class="fa-regular fa-user"></i>
+                            <p>التيم ليدر : <span> أحمد فتحي </span></p>
+                          </div>
+                          <div class="num-team">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <p>اجمالى المهام الحالية : <span>5</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="work">
+                      <h5>جاري التنفيذ</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 col-md-12 col-12">
+                    <div class="back">
+                      <h4>مهام الفريق</h4>
+                      <div class="shafia">
+                        <div class="col-lg-9 col-md-9 col-12">
+                          <div class="project-shafia">
+                            <h5>
+                              عمل الوايرفريم الخاص بصفحات التسجيل فى تطبيق شغيعا
+                            </h5>
+                            <h6>مشروع شفيعا</h6>
+                            <p>
+                              <i class="fa-solid fa-calendar-days"></i> وقت
+                              التسليم : <span> 22 مارس, 2023</span>
+                            </p>
+                            <p>
+                              <i class="fa-regular fa-user"></i>
+                              التيم ليدر : <span>أحمد فتحي</span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-12 btn-details">
+                          <button type="button" class="btn btn-info">
+                            عرض التفاصيل
+                          </button>
+                        </div>
+                      </div>
+                      <div class="Required">
+                        <h4>المطلوب</h4>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDefault"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckDefault"
+                          >
+                            عمل اليوزر فلو للمشروع كامل مع ذكر النقاط الاساسية
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            عمل الوايرفريم على سكتش
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            التسجيل باستخدام البريد الالكتروني
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            عمل اليوزر فلو للمشروع كامل مع ذكر النقاط الاساسية
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            عمل الوايرفريم على سكتش
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            التسجيل باستخدام البريد الالكتروني
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            عمل اليوزر فلو للمشروع كامل مع ذكر النقاط الاساسية
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-12 col-12">
+                    <div class="back">
+                      <div class="notes1-project border border-white">
+                        <div class="flex">
+                          <h4>اعضاء الفرق</h4>
+                        </div>
+                        <!-- model1 -->
+                        <button
+                          type="button"
+                          class="btn btn-info"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        >
+                          +اضافة
+                        </button>
+                      </div>
+                      <div class="member-team">
+                        <i class="fa-solid fa-user"></i>
+                        <p>أحمد الشربيني <br />UI/UX Designer</p>
+                      </div>
+                      <div class="member-team">
+                        <i class="fa-solid fa-user"></i>
+                        <p>أحمد حليم <br />Team Leader</p>
+                      </div>
+                      <div class="member-team">
+                        <i class="fa-solid fa-user"></i>
+                        <p>أحمد فتحي <br />Team Leader</p>
+                      </div>
+                      <div class="member-team border border-white">
+                        <i class="fa-solid fa-user"></i>
+                        <p>أحمد فتحي <br />Team Leader</p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="back">
+                        <div class="notes1-project border border-white">
+                          <div class="flex">
+                            <h4>المرفقات</h4>
+                          </div>
+                          <!-- model1 -->
+                          <button
+                            type="button"
+                            class="btn btn-info"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                          >
+                            +اضافة
+                          </button>
+                        </div>
+                        <div class="pdf pdf1">
+                          <img src="img/pdf.png" alt="" />
+                          <p>Shafeyan App.pdf <br />20 MB</p>
+                          <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="pdf pdf1">
+                          <img src="img/pdf.png" alt="" />
+                          <p>Shafeyan App.pdf <br />20 MB</p>
+                          <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="pdf pdf1 border border-white">
+                          <img src="img/pdf.png" alt="" />
+                          <p>Shafeyan App.pdf <br />20 MB</p>
+                          <i class="fa-solid fa-download"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- end table -->
+
+    <script>
+      function blockAlert() {
+        Swal.fire({
+          html:
+            '<img src="image/block.png" alt="add">' +
+            '<h5 class="swal2-title"> هل أنت متأكد من حظر  الامتحان ؟</h5>' +
+            '<p class="swal2-html-container"> فى حالة الضغط على تأكيد الحظر سيتم حظر الامتحان من المنصة نهائيا وحذ جميع الأسألة التى يحتويها الامتحان </p>',
+
+          showCancelButton: true,
+
+          confirmButtonText: "تأكيد الحظر",
+          confirmButtonAriaLabel: "Thumbs up, great!",
+          cancelButtonText: "الغاء",
+          cancelButtonAriaLabel: "Thumbs down",
+        });
+      }
+    </script>
+    <!-- sweet alert -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.js"
+      integrity="sha512-pQdCIGAWAwzEHgw7boqX3wRNUqyaj7ta8qHsZ2yZtJofKqwSsh98Q+NJn96MAYCMcMnoZhdUo771JzaJCbrJMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- sweet alert -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweet alert -->
+    <!-- show / hide edit menu in card -->
+    <script>
+      function toggleMenu(menuId) {
+        var menu = document.getElementById(menuId);
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("drop-menu-info");
+        var target = event.target;
+
+        if (!target.matches(".bi-three-dots-vertical")) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    <!-- show / hide edit menu in card -->
+
+    <script>
+      $(document).ready(function () {
+        // Handle click event for the radio button
+        $(".radio-button").on("click", function () {
+          // Remove "active" class from all radio buttons
+          $(".radio-button").removeClass("active");
+          // Add "active" class to the clicked radio button
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

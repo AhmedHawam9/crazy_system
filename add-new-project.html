@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اضافة مشروع جديد</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="main-scss/main.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.css"
+      integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="img/main-project.png" type="image" />
+    <!-- ? Favicon -->
+  </head>
+
+  <body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+      <!---------------------- start sidebar -------------------------------------------->
+
+      <section class="sidebar open">
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- <div class="image_logo">
+            <img src="image/logo.png" alt="logo_sidebar" class="logo" />
+          </div> -->
+
+          <!-- <h5>محتوي النظام</h5> -->
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link align-middle">
+              <img src="img/home.png" alt="icon" />
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="details-project.html" class="nav-link align-middle">
+              <img src="img/project.png" alt="icon" />
+              <span>المشاريع</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tasks.html" class="nav-link align-middle">
+              <img src="img/task.png" alt="icon" />
+              <span> المهام</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="table.html" class="nav-link align-middle">
+              <img src="img/Frame.png" alt="icon" />
+              <span> سجل الحضور والانصراف</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="teams.html" class="nav-link align-middle">
+              <img src="img/group.png" alt="icon" />
+              <span> الفرق</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="all-employee.html" class="nav-link align-middle">
+              <img src="img/staf.png" alt="icon" />
+              <span> الموظفين</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="seting.html" class="nav-link align-middle">
+              <img src="img/seting.png" alt="icon" />
+              <span> الاعدادات</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!---------------------- end sidebar -------------------------------------------->
+      <!---------------------- start main content -------------------------------------------->
+
+      <section class="index_cards">
+        <!---------------------- start nav -------------------------------------------->
+        <nav class="nav_top navbar">
+          <div class="container">
+            <div class="menu">
+              <i class="bi bi-list"></i>
+              <!-- <h4>المشاريع</h4> -->
+            </div>
+
+            <div class="info">
+              <div class="notfication">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="notfication" onclick="showNotification()">
+                <i class="fa-regular fa-bell"></i>
+                <!-- <i class="bi bi-bell"></i> -->
+                <!-- <span class="alerts"> 1 </span> -->
+              </div>
+              <span>12 مايو 2023 مـ </span>
+              <div class="img">
+                <img src="img/Avatar.png" alt="" />
+              </div>
+
+              <!-- <div class="btn-group">
+                <button
+                  class="btn btn-sm dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                <img src="img/Avatar.png" alt="">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="settings.html">اعدادات الحساب</a></li>
+                  <li onclick="acceptAlert()">تسجيل الخروج</li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </nav>
+        <!---------------------- finish nav -------------------------------------------->
+
+        <!---------------------- start content -------------------------------------------->
+        <div class="content_page">
+          <div class="container">
+            <div class="content">
+              <form>
+                <div class="row">
+                  <h4 class="h4">اضافة مشروع جديد</h4>
+                  <div class="col-lg-8 col-md-10 col-12">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput"> اسم المشروع</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="ادخل اسم المشروع"
+                      />
+                    </div>
+
+                    <div class="form-group icon-relativ">
+                      <label for="formGroupExampleInput"> وقت البدأ</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="حدد وقت البدأ"
+                      />
+                      <i class="fa-solid icon-abslute fa-calendar-days"></i>
+                    </div>
+                    <div class="form-group icon-relativ">
+                      <label for="formGroupExampleInput"> وقت التسليم</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="حدد وقت التسليم"
+                      />
+                      <i class="fa-solid icon-abslute fa-calendar-days"></i>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputtext"> الفريق المسئول </label>
+                      <select
+                        id="inputState"
+                        class="form-control select2 selectpicker"
+                      >
+                        <option selected>اختر فريق أو اكثر</option>
+                        <option>,,,</option>
+                        <option>...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputtext"> حالة المشروع</label>
+                      <select
+                        id="inputState"
+                        class="form-control select2 selectpicker"
+                      >
+                        <option selected>اختر حالة المشروع</option>
+                        <option>...</option>
+                        <option>....</option>
+                        <option>.....</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!--upload_photo  -->
+                  <div class="col-lg-8 col-md-10 col-12">
+                    <div class="form-group upload_file">
+                      <label for=""> اضافة صورة للمشروع</label>
+                      <label for="imageCover" class="upload_file_label">
+                        <!-- <i class="fa-regular fa-image"></i> -->
+                        <img class="" src="img/donlod.png" alt="" />
+                        <p>اسحب الصوؤة التى تريد اضافتها او قم بفتحها من</p>
+                        <span
+                          id="fileNameImage"
+                          style="color: rgba(0, 173, 128, 1)"
+                        >
+                          هنا</span
+                        >
+                      </label>
+                      <input
+                        type="file"
+                        name=""
+                        id="imageCover"
+                        class="form-control"
+                        accept="image/*"
+                        hidden
+                      />
+                    </div>
+                  </div>
+                  <!--end upload_photo  -->
+
+                  <!--upload_photo  -->
+                  <div class="col-lg-8 col-md-10 col-12">
+                    <div class="form-group upload_file">
+                      <label for=""> اضافة صورة للمشروع</label>
+                      <label for="imageCover" class="upload_file_label">
+                        <!-- <i class="fa-regular fa-image"></i> -->
+                        <img class="" src="img/donlod.png" alt="" />
+                        <p>اسحب الصوؤة التى تريد اضافتها او قم بفتحها من</p>
+                        <span
+                          id="fileNameImage"
+                          style="color: rgba(0, 173, 128, 1)"
+                        >
+                          هنا</span
+                        >
+                      </label>
+                      <input
+                        type="file"
+                        name=""
+                        id="imageCover"
+                        class="form-control"
+                        accept="image/*"
+                        hidden
+                      />
+                    </div>
+                  </div>
+                  <!--end upload_photo  -->
+
+                  <div class="col-lg-8 col-md-10 col-12">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1"
+                        >وصف المشروع</label
+                      >
+                      <textarea
+                        class="form-control"
+                        style="height: 180px"
+                        id="exampleFormControlTextarea1"
+                        rows="5"
+                        placeholder="ادخل تفاصيل المشروع"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-7 col-md-9 col-10">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput"> اضافة ملاحظات</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="مثال : المشروع عبارة عن موقع وتطبيق وداش بورد ..."
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-lg-1 col-md-1 col-2"
+                    style="text-align: center"
+                  >
+                    <a href="#">
+                      <button type="button" class="btn add-note">+</button>
+                    </a>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-4 col-md-3 col-9 btn-project add">
+                      <a href="#">
+                        <button type="button" class="btn btn-success">
+                          اضف الآن
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- end table -->
+
+    <script>
+      function blockAlert() {
+        Swal.fire({
+          html:
+            '<img src="image/block.png" alt="add">' +
+            '<h5 class="swal2-title"> هل أنت متأكد من حظر  الامتحان ؟</h5>' +
+            '<p class="swal2-html-container"> فى حالة الضغط على تأكيد الحظر سيتم حظر الامتحان من المنصة نهائيا وحذ جميع الأسألة التى يحتويها الامتحان </p>',
+
+          showCancelButton: true,
+
+          confirmButtonText: "تأكيد الحظر",
+          confirmButtonAriaLabel: "Thumbs up, great!",
+          cancelButtonText: "الغاء",
+          cancelButtonAriaLabel: "Thumbs down",
+        });
+      }
+    </script>
+    <!-- sweet alert -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.js"
+      integrity="sha512-pQdCIGAWAwzEHgw7boqX3wRNUqyaj7ta8qHsZ2yZtJofKqwSsh98Q+NJn96MAYCMcMnoZhdUo771JzaJCbrJMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- sweet alert -->
+
+    <!-- upload_photo -->
+    <script>
+      const fileInputImage = document.getElementById("imageCover");
+      const fileNameImage = document.getElementById("fileNameImage");
+
+      fileInputImage.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        fileNameImage.textContent = file.name;
+      });
+    </script>
+
+    <!--upload_photo  -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweet alert -->
+    <!-- show / hide edit menu in card -->
+    <script>
+      function toggleMenu(menuId) {
+        var menu = document.getElementById(menuId);
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("drop-menu-info");
+        var target = event.target;
+
+        if (!target.matches(".bi-three-dots-vertical")) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    <!-- show / hide edit menu in card -->
+
+    <script>
+      $(document).ready(function () {
+        // Handle click event for the radio button
+        $(".radio-button").on("click", function () {
+          // Remove "active" class from all radio buttons
+          $(".radio-button").removeClass("active");
+          // Add "active" class to the clicked radio button
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المهام / تفاصيل المهمة</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="main-scss/main.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- table -->
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="img/main-project.png" type="image" />
+    <!-- ? Favicon -->
+  </head>
+
+  <body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+      <!---------------------- start sidebar -------------------------------------------->
+
+      <section class="sidebar open">
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- <div class="image_logo">
+            <img src="image/logo.png" alt="logo_sidebar" class="logo" />
+          </div> -->
+
+          <!-- <h5>محتوي النظام</h5> -->
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link align-middle">
+              <img src="img/home.png" alt="icon" />
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="details-project.html" class="nav-link align-middle">
+              <img src="img/project.png" alt="icon" />
+              <span>المشاريع</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tasks.html" class="nav-link align-middle">
+              <img src="img/task.png" alt="icon" />
+              <span> المهام</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="table.html" class="nav-link align-middle">
+              <img src="img/Frame.png" alt="icon" />
+              <span> سجل الحضور والانصراف</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="teams.html" class="nav-link align-middle">
+              <img src="img/group.png" alt="icon" />
+              <span> الفرق</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="all-employee.html" class="nav-link align-middle">
+              <img src="img/staf.png" alt="icon" />
+              <span> الموظفين</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="seting.html" class="nav-link align-middle">
+              <img src="img/seting.png" alt="icon" />
+              <span> الاعدادات</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!---------------------- end sidebar -------------------------------------------->
+      <!---------------------- start main content -------------------------------------------->
+
+      <section class="index_cards">
+        <!---------------------- start nav -------------------------------------------->
+        <nav class="nav_top navbar">
+          <div class="container">
+            <div class="menu">
+              <i class="bi bi-list"></i>
+              <!-- <h4>المشاريع</h4> -->
+            </div>
+
+            <div class="info">
+              <div class="notfication">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="notfication" onclick="showNotification()">
+                <i class="fa-regular fa-bell"></i>
+                <!-- <i class="bi bi-bell"></i> -->
+                <!-- <span class="alerts"> 1 </span> -->
+              </div>
+              <span>12 مايو 2023 مـ </span>
+              <div class="img">
+                <img src="img/Avatar.png" alt="" />
+              </div>
+
+              <!-- <div class="btn-group">
+                <button
+                  class="btn btn-sm dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                <img src="img/Avatar.png" alt="">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="settings.html">اعدادات الحساب</a></li>
+                  <li onclick="acceptAlert()">تسجيل الخروج</li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </nav>
+        <!---------------------- finish nav -------------------------------------------->
+
+        <!---------------------- start content -------------------------------------------->
+        <div class="content_page">
+          <div class="container">
+            <div class="content">
+              <div class="row">
+                <div class="head-table"style="margin: 0 0 2rem 0">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-12" style="margin: auto">
+                      <h4>الحضور والانصراف</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12">
+                      <div class="form-group" style="margin: 1rem;">
+                      
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputCity"
+                          placeholder="ابحث بإسم الموظف"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12">
+                      <div class="form-group" style="margin: 1rem;">
+                    
+                        <select id="inputState" class="form-control">
+                          <option selected>كل الفرق</option>
+                          <option>...</option>
+                          <option>...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12">
+                      <div class="form-group" style="margin: 1rem;">
+                       
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="inputZip"
+                          placeholder="12 مايو - 12 يوليو "
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="row">
+                     <div class="chose"> 
+                      <div class="col-lg-1 col-md-5 col-12">
+                      <h4>الحضور والانصراف</h4>
+                    </div>
+                      <div class="form-row">
+                        <div class="col-lg-4 col-md-3 col-12">
+                          <div class="form-group">
+                            <label for="inputCity"></label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputCity"
+                              placeholder="ابحث بإسم الموظف"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12">
+                          <div class="form-group">
+                            
+                              <label for="inputState"></label>
+                              <select id="inputState" class="form-control">
+                                <option selected>كل الفرق</option>
+                                <option>...</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-3 col-12">
+                        <div class="form-group col-md-2">
+                          <label for="inputZip"></label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputZip"
+                            placeholder="12 مايو - 12 يوليو"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div> -->
+                </div>
+
+                <div class="table-responsive">
+                  <table
+                    id="example"
+                    class="table table-bordered"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="th">
+                          <span>الاسم</span>
+                          <p>اليوم</p>
+                        </th>
+                        <th colspan="2">الاثنين <br />22 مايو</th>
+                        <th colspan="2">الاثنين <br />22 مايو</th>
+                        <th colspan="2">الثلاثاء <br />22 مايو</th>
+                        <th colspan="2">الاربعاء <br />22 مايو</th>
+                        <th colspan="2">الخميس <br />22 مايو</th>
+                        <th colspan="2">الجمعة <br />22 مايو</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td class="td">الحضور</td>
+                        <td class="td">الانصراف</td>
+                        <td class="td">الحضور</td>
+                        <td class="td">الانصراف</td>
+                        <td class="td">الحضور</td>
+                        <td class="td">الانصراف</td>
+                        <td class="td">الحضور</td>
+                        <td class="td">الانصراف</td>
+                        <td class="td">الحضور</td>
+                        <td class="td">الانصراف</td>
+                        <td class="td">الحضور</td>
+                        <td class="td">الانصراف</td>
+                      </tr>
+                      <tr>
+                        <td>محمود الرفاعي</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                      </tr>
+                      <tr>
+                        <td>محمود الرفاعي</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                      </tr>
+                      <tr>
+                        <td>محمود الرفاعي</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                      </tr>
+                      <tr>
+                        <td>محمود الرفاعي</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                      </tr>
+                      <tr>
+                        <td>محمود الرفاعي</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                      </tr>
+                      <tr>
+                        <td>محمود الرفاعي</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-xmark xmark"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- end table -->
+
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+
+    <!-- table -->
+  </body>
+</html>

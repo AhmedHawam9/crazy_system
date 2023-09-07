@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اضافة موظف جديد</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="main-scss/main.min.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.css"
+      integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- sweet alert -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.css"
+      integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="img/main-project.png" type="image" />
+    <!-- ? Favicon -->
+  </head>
+
+  <body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+      <!---------------------- start sidebar -------------------------------------------->
+
+      <section class="sidebar open">
+        <ul
+          class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          id="menu"
+        >
+          <!-- <div class="image_logo">
+            <img src="image/logo.png" alt="logo_sidebar" class="logo" />
+          </div> -->
+
+          <!-- <h5>محتوي النظام</h5> -->
+          <li class="nav-item">
+            <a href="main.html" class="nav-link align-middle">
+              <img src="img/home.png" alt="icon" />
+              <span>الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link align-middle">
+              <img src="img/project.png" alt="icon" />
+              <span>المشاريع</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="tasks.html" class="nav-link align-middle">
+              <img src="img/task.png" alt="icon" />
+              <span> المهام</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="table.html" class="nav-link align-middle">
+              <img src="img/Frame.png" alt="icon" />
+              <span> سجل الحضور والانصراف</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="teams.html" class="nav-link align-middle">
+              <img src="img/group.png" alt="icon" />
+              <span> الفرق</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="all-employee.html" class="nav-link align-middle">
+              <img src="img/staf.png" alt="icon" />
+              <span> الموظفين</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="seting.html" class="nav-link align-middle">
+              <img src="img/seting.png" alt="icon" />
+              <span> الاعدادات</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!---------------------- end sidebar -------------------------------------------->
+      <!---------------------- start main content -------------------------------------------->
+
+      <section class="index_cards">
+        <!---------------------- start nav -------------------------------------------->
+        <nav class="nav_top navbar">
+          <div class="container">
+            <div class="menu">
+              <i class="bi bi-list"></i>
+              <!-- <h4>المشاريع</h4> -->
+            </div>
+
+            <div class="info">
+              <div class="notfication">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <div class="notfication" onclick="showNotification()">
+                <i class="fa-regular fa-bell"></i>
+                <!-- <i class="bi bi-bell"></i> -->
+                <!-- <span class="alerts"> 1 </span> -->
+              </div>
+              <span>12 مايو 2023 مـ </span>
+              <div class="img">
+                <img src="img/Avatar.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!---------------------- finish nav -------------------------------------------->
+
+        <!---------------------- start content -------------------------------------------->
+        <div class="content_page">
+          <div class="container">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                  <div class="img-card">
+                    <img class="img-list" src="img/list.png" alt="" />
+                    <img class="img-wave" src="img/wave16.png" alt="" />
+                    <div class="card-one">
+                      <h5>completed tasks</h5>
+                      <p>48</p>
+                    </div>
+                    <p class="persntg">
+                      <i class="fa-solid fa-arrow-up"></i>22.8%
+                    </p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped bg-info"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                  <div class="img-card card-green">
+                    <img class="img-list" src="img/list.png" alt="" />
+                    <img class="img-wave" src="img/wave16.png" alt="" />
+                    <div class="card-one">
+                      <h5>Running Tasks</h5>
+                      <p>12</p>
+                    </div>
+                    <p class="persntg">
+                      <i class="fa-solid fa-arrow-up"></i>35,4%
+                    </p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped bg-success"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                  <div class="img-card card-blue">
+                    <img class="img-list" src="img/logo2.png" alt="" />
+                    <img class="img-wave" src="img/wave16.png" alt="" />
+                    <div class="card-one">
+                      <h5>Employees</h5>
+                      <p>35</p>
+                    </div>
+                    <p class="persntg">
+                      <i class="fa-solid fa-arrow-up"></i>45.5%
+                    </p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped Employees"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="10"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                  <div class="img-card card-red">
+                    <img class="img-list" src="img/logo2.png" alt="" />
+                    <img class="img-wave" src="img/wave16.png" alt="" />
+                    <div class="card-one">
+                      <h5>Projects</h5>
+                      <p>145</p>
+                    </div>
+                    <p class="persntg">
+                      <i class="fa-solid fa-arrow-up"></i>35,4%
+                    </p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped bg-warning"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4 col-md-5 col-12">
+                  <div class="back">
+                    <div class="Employees-Availability">
+                      <h6>Employees Availability</h6>
+                      <div class="col-lg-5 col-md-7 col-5">
+                        <select
+                          class="form-control selectpicker"
+                          aria-label="Default select example"
+                        >
+                          <option
+                            selected
+                            style="
+                              font-size: 14px;
+                              display: flex;
+                              justify-content: end;
+                            "
+                          >
+                            This Week
+                          </option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-6">
+                        <div class="card-1">
+                          <i
+                            class="fa-regular fa-calendar-check"
+                            style="margin-bottom: 0.3rem"
+                          ></i>
+                          <h6>Attendance</h6>
+                          <p>412 Day</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-6">
+                        <div class="card-1">
+                          <i
+                            class="fa-regular fa-calendar-days"
+                            style="margin-bottom: 0.3rem"
+                          ></i>
+                          <h6>Workdays</h6>
+                          <p>412 Day</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-6">
+                        <div class="card-1">
+                          <i class="fa-regular fa-clock"    style="margin-bottom: 0.3rem"></i>
+                          <h6>Late Coming</h6>
+                          <p>32 Hours</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-6">
+                        <div class="card-1">
+                          <i class="fa-regular fa-calendar-xmark"   style="margin-bottom: 0.3rem"></i>
+                          <h6>Absent</h6>
+                          <p>08 Day</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                  <div class="back">
+                    <div class="elemnt">
+                      <h5>45</h5>
+                      <h4>Total Employees</h4>
+                    </div>
+                    <canvas id="myChart2"></canvas>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12">
+                  <div class="back">
+                    <div class="row">
+                      <div class="table-responsive">
+                        <table class="table table-posion">
+                          <thead>
+                            <tr>
+                              <th scope="col">Status</th>
+                              <th scope="col">Progress</th>
+                              <th scope="col">Deadline</th>
+                              <th scope="col">Starting Date</th>
+                              <th scope="col">Team</th>
+                              <th scope="col">Project</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td
+                                scope="row"
+                                style="color: rgba(76, 159, 224, 1)"
+                              >
+                                In Progress
+                              </td>
+                              <td>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar-1"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="25"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </td>
+                              <td>02-03-2022</td>
+                              <td>02-03-2022</td>
+                              <td>
+                                <img src="img/Group-table.png" alt="" />
+                              </td>
+                              <td>Cahift App</td>
+                            </tr>
+                            <tr>
+                              <td
+                                scope="row"
+                                style="color: rgba(219, 157, 30, 1)"
+                              >
+                                In Progress
+                              </td>
+                              <td>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar-2"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="25"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </td>
+                              <td>02-03-2022</td>
+                              <td>02-03-2022</td>
+                              <td>
+                                <img src="img/Group-table.png" alt="" />
+                              </td>
+                              <td>Cahift App</td>
+                            </tr>
+                            <tr>
+                              <td
+                                scope="row"
+                                style="color: rgba(255, 73, 71, 1)"
+                              >
+                                Hanging
+                              </td>
+                              <td>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar-3"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="25"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </td>
+                              <td>02-03-2022</td>
+                              <td>02-03-2022</td>
+                              <td>
+                                <img src="img/Group-table.png" alt="" />
+                              </td>
+                              <td>Cahift App</td>
+                            </tr>
+                            <tr>
+                              <td
+                                scope="row"
+                                style="color: rgba(162, 212, 94, 1)"
+                              >
+                                Finished
+                              </td>
+                              <td>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar-4"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="25"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </td>
+                              <td>02-03-2022</td>
+                              <td>02-03-2022</td>
+                              <td>
+                                <img src="img/Group-table.png" alt="" />
+                              </td>
+                              <td>Cahift App</td>
+                            </tr>
+                            <tr>
+                              <td
+                                scope="row"
+                                style="color: rgba(219, 157, 30, 1)"
+                              >
+                                In Progress
+                              </td>
+                              <td>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar-5"
+                                    role="progressbar"
+                                    style="width: 50%"
+                                    aria-valuenow="25"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                              </td>
+                              <td>02-03-2022</td>
+                              <td>02-03-2022</td>
+                              <td>
+                                <img src="img/Group-table.png" alt="" />
+                              </td>
+                              <td>Cahift App</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- end table -->
+
+    <!-- swet alert -->
+    <script>
+      // ALERT WITH CUSTOM ICON
+      (customImage = document.querySelector("#custom-image")),
+        (customImage.onclick = function () {
+          Swal.fire({
+            title: "تم اضافة الموظف بنجاح",
+            text: "يمكنك الاطلاع علي تفاصيل الموظف و معرفة المشاريع و المهمات و الحضور و الانصراف الخاص به",
+            imageUrl: "img/star.png",
+            imageWidth: 200,
+            imageAlt: "Custom image",
+            customClass: {
+              confirmButton: "btn btn-success",
+            },
+            buttonsStyling: false,
+          });
+        });
+    </script>
+
+    <!-- swet alert -->
+
+    <script>
+      function blockAlert() {
+        Swal.fire({
+          html:
+            '<img src="image/block.png" alt="add">' +
+            '<h5 class="swal2-title"> هل أنت متأكد من حظر  الامتحان ؟</h5>' +
+            '<p class="swal2-html-container"> فى حالة الضغط على تأكيد الحظر سيتم حظر الامتحان من المنصة نهائيا وحذ جميع الأسألة التى يحتويها الامتحان </p>',
+
+          showCancelButton: true,
+
+          confirmButtonText: "تأكيد الحظر",
+          confirmButtonAriaLabel: "Thumbs up, great!",
+          cancelButtonText: "الغاء",
+          cancelButtonAriaLabel: "Thumbs down",
+        });
+      }
+    </script>
+    <!-- sweet alert -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.22/sweetalert2.min.js"
+      integrity="sha512-pQdCIGAWAwzEHgw7boqX3wRNUqyaj7ta8qHsZ2yZtJofKqwSsh98Q+NJn96MAYCMcMnoZhdUo771JzaJCbrJMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- sweet alert -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- دى المكنبه بتاعه الرسم البيانى -->
+    <script src="js/chart.min.js"></script>
+    <!-- main js -->
+
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweet alert -->
+    <!-- show / hide edit menu in card -->
+    <!-- <script>
+      function toggleMenu(menuId) {
+        var menu = document.getElementById(menuId);
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("drop-menu-info");
+        var target = event.target;
+
+        if (!target.matches(".bi-three-dots-vertical")) {
+          menu.style.display = "none";
+        }
+      });
+    </script> -->
+    <!-- show / hide edit menu in card -->
+
+    <script>
+      $(document).ready(function () {
+        // Handle click event for the radio button
+        $(".radio-button").on("click", function () {
+          // Remove "active" class from all radio buttons
+          $(".radio-button").removeClass("active");
+          // Add "active" class to the clicked radio button
+          $(this).addClass("active");
+        });
+      });
+    </script>
+    <!-- eye -->
+    <script>
+      function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var lockIcon = document.getElementById("lockIcon");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          lockIcon.classList.remove("fa-eye");
+          lockIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          lockIcon.classList.remove("fa-eye-slash");
+          lockIcon.classList.add("fa-eye");
+        }
+      }
+    </script>
+    <!-- eye -->
+
+    <!--uplod img   -->
+    <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $("#imagePreview").css(
+              "background-image",
+              "url(" + e.target.result + ")"
+            );
+            $("#imagePreview").hide();
+            $("#imagePreview").fadeIn(650);
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#imageUpload").change(function () {
+        readURL(this);
+      });
+    </script>
+
+    <!-- uplod img  -->
+
+    <!--  -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("myChart2").getContext("2d");
+        const labels = ["Women", "Man"];
+        const data = {
+          labels: labels,
+          datasets: [
+            {
+              label: "My Dataset",
+              data: [12, 19],
+              backgroundColor: [
+                "rgba(245, 60, 86, 1)", // Color for Branch 1
+                "rgba(17, 205, 239, 1)", // Color for Branch 2
+              ],
+              borderColor: [
+                "rgba(255, 255, 255, 1)", // Border color for Branch 1
+                "rgba(255, 255, 255, 1)", // Border color for Branch 2
+              ],
+              borderWidth: 2,
+            },
+          ],
+        };
+        const config = {
+          type: "doughnut",
+          data: data,
+          options: {
+            responsive: true,
+            animations: {
+              tension: {
+                duration: 4000,
+                easing: "linear",
+                from: 1,
+                to: 0,
+                loop: true,
+              },
+            },
+            interaction: {
+              intersect: false,
+            },
+            scales: {
+              x: {
+                stacked: false,
+                display: false,
+              },
+              y: {
+                stacked: false,
+                display: false,
+              },
+            },
+          },
+        };
+        const myChart = new Chart(ctx, config);
+      });
+    </script>
+  </body>
+</html>

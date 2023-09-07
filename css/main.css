@@ -491,7 +491,8 @@
   color: black;
 }
 .details-Flutter span {
-  font-size: 15px;}
+  font-size: 15px;
+}
 
 .team-Flutter img {
   background-color: rgba(39, 145, 181, 1);
@@ -641,13 +642,11 @@
   }
 }
 
- @media (max-width: 600px) {
- .work h5 {
+@media (max-width: 600px) {
+  .work h5 {
     font-size: 15px;
- }
+  }
 }
-
-
 
 /* Flutter */
 
@@ -696,7 +695,7 @@
 }
 .back .head .form-control {
   padding: 1rem 1rem;
-  margin-left: 5rem; 
+  margin-left: 5rem;
 }
 @media (max-width: 600px) {
   .head {
@@ -713,13 +712,13 @@
     margin: 1rem;
   }
   .shafia .project-shafia h5 {
-font-size: 15px;
+    font-size: 15px;
   }
   .shafia .project-shafia span {
-font-size: 15px;
+    font-size: 15px;
   }
   .form-check .form-check-label {
-font-size: 12px;
+    font-size: 12px;
   }
   /* .head .explain-head {
     display: flex;
@@ -831,7 +830,7 @@ font-size: 12px;
   display: flex;
 }
 
-.content_page table thead th {
+ table thead th {
   background-color: rgba(176, 188, 193, 0.19);
   color: rgba(87, 107, 116, 1);
   text-align: center;
@@ -848,7 +847,7 @@ font-size: 12px;
 .content_page .table-bordered {
   border: 1px solid rgba(163, 174, 178, 1);
 }
-.content_page table td {
+table td {
   text-align: center;
   font-family: "regular";
   padding: 1rem 0.5rem;
@@ -875,15 +874,15 @@ font-size: 12px;
 }
 
 @media (max-width: 600px) {
-.content_page table thead th {
-  font-size: 13px;
-}
-.content_page table tbody .td {
-  font-size: 14px;
-}
-.content_page table td {
-  font-size: 12px;
-}
+  .content_page table thead th {
+    font-size: 13px;
+  }
+  .content_page table tbody .td {
+    font-size: 14px;
+  }
+  .content_page table td {
+    font-size: 12px;
+  }
 }
 /* employee */
 
@@ -1355,19 +1354,18 @@ body {
   padding: 20px;
 } */
 .avatar-preview .img {
-   background-image: url(../img/img.png); 
+  background-image: url(../img/img.png);
 }
-.avatar-edit .btn{
+.avatar-edit .btn {
   background-color: rgba(39, 145, 181, 1);
   color: white;
-  transition: .7s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
-.avatar-edit .btn:hover{
+.avatar-edit .btn:hover {
   background-color: transparent;
   color: rgba(39, 145, 181, 1) !important;
   border: 1px solid rgba(39, 145, 181, 1);
-  transition: .7s ease-in-out;
-  
+  transition: 0.7s ease-in-out;
 }
 .avatar-edit p {
   font-family: "regular";
@@ -1437,7 +1435,7 @@ h1 small {
   /*1 width: 192px;
   height: 192px; */
   width: 105px;
-    height: 115px;
+  height: 115px;
   /* width: 80px;
   height: 100px; */
   position: relative;
@@ -1467,6 +1465,186 @@ h1 small {
 }
 
 /* uplod img */
+
+/* main */
+.img-card {
+  background-color: rgba(234, 136, 89, 1);
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.img-card .img-list {
+  width: 30%;
+  opacity: 0.1;
+}
+.img-card .img-wave {
+  width: 100%;
+}
+.img-card .card-one {
+  position: absolute;
+  color: white;
+  font-family: "bold";
+  top: 35%;
+  left: 10%;
+  bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+.img-card .progress {
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  height: 8px;
+  justify-content: end;
+}
+.img-card .persntg {
+  position: absolute;
+  font-family: "regular";
+  color: white;
+  bottom: 23%;
+  right: 10%;
+}
+.bg-info {
+  background-color: rgba(164, 196, 222, 1) !important;
+  border-radius: 10px;
+}
+.card-green {
+  background-color: rgba(74, 177, 155, 1) !important;
+}
+.bg-success {
+  background-color: rgba(230, 148, 77, 1) !important;
+  border-radius: 10px;
+}
+
+.card-blue {
+  background-color: rgba(43, 154, 239, 1) !important;
+}
+.Employees {
+  background-color: rgba(77, 230, 194, 1) !important;
+}
+.card-red {
+  background-color: rgba(202, 79, 221, 1);
+}
+.bg-warning {
+  background-color: rgba(77, 163, 230, 1) !important;
+}
+@media (max-width: 600px) {
+  .img-card {
+    width: 85%;
+    margin: 15px auto;
+  }
+}
+
+.Employees-Availability {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.Employees-Availability h6 {
+  font-family: "bold";
+  font-size: 17px;
+}
+.form-select {
+  font-family: "regular";
+  background-size: 30px 12px;
+  color: rgba(175, 175, 175, 1);
+  border: 1px solid rgba(221, 223, 225, 1);
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border: 1px solid rgba(175, 175, 175, 1);
+  border-radius: 10px;
+  padding: 0.7rem;
+  margin: 1rem 0 0rem;
+}
+.card-1 h6 {
+  margin: 0.7rem 0;
+}
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  text-align: end;
+  font-size: 17px;
+}
+
+.bootstrap-select .dropdown-menu li a span.text {
+  display: flex;
+  justify-content: end;
+  font-size: 14px;
+}
+.bootstrap-select .dropdown-menu li.selected a {
+  /* color: var(--color-secound); */
+  color: white;
+}
+
+.elemnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "bold";
+}
+.table-posion{
+  position: relative;
+}
+ /* .tbody .progress{
+  position: absolute;
+  display: flex;
+  justify-content: end;
+}  */
+.table-posion th{
+  font-size: 12px;
+}
+.table-posion td{
+  font-size: 12px;
+  padding: 16px 0 0;
+  height: 51px;
+}
+
+.table-posion tbody img{
+  width: 100px;
+  height: 35px;
+}
+.table-posion tbody .progress{
+justify-content: end;
+border-radius: 10px;
+height: 6px;
+color:  rgba(76, 159, 224, 1);
+}
+.table-posion tbody .progress-bar-1 {
+background-color: rgba(76, 159, 224, 1);
+}
+.table-posion tbody .progress-bar-2 {
+background-color: rgba(219, 157, 30, 1);
+}
+.table-posion tbody .progress-bar-3 {
+background-color: rgba(255, 73, 71, 1);
+}
+.table-posion tbody .progress-bar-4 {
+background-color: rgba(162, 212, 94, 1);
+}
+.table-posion tbody .progress-bar-5 {
+background-color: rgba(219, 157, 30, 1);
+}
+@media (max-width: 600px) {
+  .table-posion td{
+    height: 60px;
+  }
+}
+
+.table-posion thead th{
+   background-color: white;
+   color: black;
+}
+
+
 
 @media (max-width: 1500px) {
 }
